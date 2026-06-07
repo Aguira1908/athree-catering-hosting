@@ -13,7 +13,8 @@ use App\Http\Controllers\ReservationController;
 // HOME & STATIC PAGES
 // =============================================
 Route::get('/', function () {
-    return view('home.index');
+    $specialties = \App\Models\Menu::limit(4)->get();
+    return view('home.index', compact('specialties'));
 })->name('home');
 
 Route::get('/about', function () {
