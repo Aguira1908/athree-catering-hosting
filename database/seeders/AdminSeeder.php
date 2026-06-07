@@ -8,15 +8,15 @@ use App\Models\Admin;
 
 class AdminSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-        Admin::create([
-            'username' => 'admin',
-            'password' => Hash::make('password'),
-            'nama' => 'Administrator'
-        ]);
-    }
+  /**
+   * Run the database seeds.
+   */
+  public function run(): void
+  {
+    Admin::create([
+      'username' => 'admin@athree.com',
+      'password' => Hash::make('password'),
+      'nama' => 'Administrator'
+    ]);
+  }
 }
